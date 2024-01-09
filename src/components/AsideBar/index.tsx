@@ -10,17 +10,23 @@ export function AsideBar() {
         <RxDashboard className={styles.Icon} />
         Home
       </Link>
+      <label>CSS</label>
       <Link className={styles.Links} href={'/CSS/box-shadow'}>
         <RxShadowOuter className={styles.Icon} />
-        Box Shadow
+        Box Shadows
       </Link>
       <Link className={styles.Links} href={'/CSS/border'}>
         <RxCorners className={styles.Icon} />
-        Border Radius
+        Borders
       </Link>
       <Link className={styles.Links} href={'/CSS/flex-box'}>
         <RxBorderTop className={styles.Icon} />
         FlexBox
+      </Link>
+      <label>JS</label>
+      <Link className={styles.Links} href={'/CSS/flex-box'}>
+        <RxBorderTop className={styles.Icon} />
+        JSON Generator
       </Link>
     </aside>
   )
