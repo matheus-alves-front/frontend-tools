@@ -3,9 +3,11 @@ import { ReactNode, createContext, useEffect, useState } from "react";
 
 type CardCssContextProps = {
   boxShadow: string;
-  UpdateBoxShadow: (boxShadow: string) => void;
   border: string;
+  borderRadius: string;
+  UpdateBoxShadow: (boxShadow: string) => void;
   UpdateBorder: (border: string) => void;
+  UpdateBorderRadius: (radius: string) => void;
   ResetBorder: () => void;
   ResetBoxShadow: () => void;
 }
@@ -18,6 +20,7 @@ export function CardCssContextProvider({children}: {
 }) {
   const [boxShadow, setBoxShadow] = useState("10px 10px 5px 0px rgba(238, 238, 238, 1)")
   const [border, setBorder] = useState("2px solid rgba(0, 0, 0, 1)")
+  const [borderRadius, setBorderRadius] = useState('0px')
 
   function UpdateBoxShadow(boxShadowParam: string) {
     setBoxShadow(boxShadowParam)
@@ -27,8 +30,13 @@ export function CardCssContextProvider({children}: {
     setBorder(borderParam)
   }
 
+  function UpdateBorderRadius(borderRadiusParam: string) {
+    setBorderRadius(borderRadiusParam)
+  }
+
   function ResetBorder() {
     setBorder("2px solid rgba(0, 0, 0, 1)")
+    setBorderRadius('0px')
   }
 
   function ResetBoxShadow() {
@@ -39,10 +47,12 @@ export function CardCssContextProvider({children}: {
     <CardCssContext.Provider value={{
       boxShadow,
       border,
+      borderRadius,
       UpdateBoxShadow,
       UpdateBorder,
+      UpdateBorderRadius,
       ResetBorder,
-      ResetBoxShadow
+      ResetBoxShadow,
     }}>
       {children}
     </CardCssContext.Provider>

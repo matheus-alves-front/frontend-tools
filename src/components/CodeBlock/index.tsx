@@ -7,17 +7,20 @@ import styles from './styles.module.scss'
 export function CodeBlock() {
   const {
     border, 
-    boxShadow
+    boxShadow,
+    borderRadius
   } = useContext(CardCssContext)
 
   return (
     <div className={styles.Content}>
       <div className={styles.Code} style={{
         boxShadow: boxShadow,
-        border: border
+        border: border,
+        borderRadius: borderRadius
       }}>
         <p>border: {border};</p>
-        <p>box-shadow: {boxShadow}</p>
+        <p>border-radius: {borderRadius};</p>
+        <p>box-shadow: {boxShadow};</p>
       </div>
     </div>
   )

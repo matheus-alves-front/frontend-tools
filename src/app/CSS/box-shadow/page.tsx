@@ -54,6 +54,7 @@ export default function BoxShadowPage() {
               name="horizontal" 
               min={'-50'}
               max={'50'}
+              defaultValue={10}
             />
           </fieldset>
           <fieldset>
@@ -64,6 +65,7 @@ export default function BoxShadowPage() {
               name="vertical"
               min={'-50'}
               max={'50'}
+              defaultValue={10}
             />
           </fieldset>
           <fieldset>
@@ -72,6 +74,7 @@ export default function BoxShadowPage() {
               onChange={(e) => setBlur(`${e.target.value}px`)} 
               type="range" 
               name="blur" 
+              defaultValue={5}
             />
           </fieldset>
           <fieldset>
@@ -80,14 +83,16 @@ export default function BoxShadowPage() {
               onChange={(e) => setSpread(`${e.target.value}px`)} 
               type="range" 
               name="spread" 
+              defaultValue={0}
             />
           </fieldset>
           <fieldset>
             <label htmlFor="color">color {color}</label>
             <input 
-              onChange={(e) => setColor(`${e.target.value}px`)}
+              onChange={(e) => setColor(`${e.target.value}`)}
               type="color" 
               name="color" 
+              defaultValue={color}
             />
           </fieldset>
           <fieldset>
@@ -99,6 +104,7 @@ export default function BoxShadowPage() {
               min={0}
               max={1}
               step={0.01}
+              defaultValue={1}
             />
           </fieldset>
         </form>

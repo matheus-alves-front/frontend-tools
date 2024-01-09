@@ -10,19 +10,24 @@ import { ResetGroupCSSButtons } from "@/components/ResetGroupCSSButtons";
 export default function BorderPage() {
   const {
     UpdateBorder,
+    UpdateBorderRadius,
+
   } = useContext(CardCssContext)
 
   const [width, setWidth] = useState("2px")
   const [style, setStyle] = useState("solid")
   const [color, setColor] = useState("#00000")
+  const [radius, setRadius] = useState('0px')
 
   useEffect(() => {
     const colorRgba = converterHexParaRGBA(color)
     UpdateBorder(`${width} ${style} ${colorRgba}`)
+    UpdateBorderRadius(radius)
   }, [
     width,
     style,
-    color
+    color,
+    radius
   ])
 
   function converterHexParaRGBA(hexadecimal: string) {
@@ -49,6 +54,17 @@ export default function BorderPage() {
               name="width" 
               min={'1'}
               max={'30'}
+            />
+          </fieldset>
+          <fieldset>
+            <label htmlFor="radius">radius: {radius}</label>
+            <input 
+              onChange={(e) => setRadius(`${e.target.value}px`)} 
+              type="range" 
+              name="radius" 
+              min={'0'}
+              max={'100'}
+              defaultValue={0}
             />
           </fieldset>
           <fieldset>
