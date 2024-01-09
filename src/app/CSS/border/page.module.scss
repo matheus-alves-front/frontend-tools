@@ -1,0 +1,21 @@
+.Content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  form {
+    width: 48%;
+    font-size: 1.3rem;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+    margin: 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+
+    fieldset {
+      display: flex;
+      flex-direction: column;
+      border-radius: 1rem;
+    }
+  }
+}

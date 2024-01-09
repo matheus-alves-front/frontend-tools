@@ -1,0 +1,21 @@
+.ButtonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  .Button {
+    border: 1px solid #555;
+    color:  #555;
+    background-color: transparent;
+    transition: .3s ease;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      color:  #fff;
+      background-color: #555;
+    }
+  }
+}

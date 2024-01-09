@@ -1,0 +1,40 @@
+.Content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem 0;
+  box-shadow: 3px 2px 5px 0px rgba(0,0,0,0.45);
+  
+  overflow: hidden;
+  width: 60px;
+  transition: .3s ease-out;
+  background-color: #fff;
+  
+  &:hover {
+    width: 300px;
+  }
+
+  .Links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #555;
+    font-size: 1.7rem;
+    text-decoration: none;
+    font-weight: 600;
+    padding-left: .8rem;
+    white-space: nowrap;
+
+    .Icon {
+      font-size: 2rem;
+      transition: .2s ease-in-out;
+      min-width: 35px;
+    }
+
+    &:hover { 
+      .Icon {
+        margin-right: 10px;
+      }
+    }
+  }
+}
