@@ -24,7 +24,7 @@ export function AsideBar() {
         FlexBox
       </Link>
       <label>JS</label>
-      <Link className={styles.Links} href={'/CSS/flex-box'}>
+      <Link className={styles.Links} href={'/JS/JSON-Generator'}>
         <RxBorderTop className={styles.Icon} />
         JSON Generator
       </Link>
